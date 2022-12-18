@@ -1,0 +1,38 @@
+ #include <iostream>
+using namespace std;
+
+class A 
+{
+  public:
+  int x,y,z;
+  void operator +()
+  {
+      x+=2;
+      y+=3;
+      z+=4;
+  }
+  
+  void getdata(int a,int b,int c)
+  {
+      x=a;
+      y=b;
+      z=c;
+  }
+  
+  void show()
+  {
+      cout<<x<<y<<z<<endl;
+  }
+    
+};
+
+
+int main()
+{
+   A base;
+   base.getdata(5,4,3);
+   +base;
+   base.show();
+
+    return 0;
+}
