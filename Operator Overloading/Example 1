@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class A 
+{
+  public:
+  int x;
+  void operator +()
+  {
+      x+=2;
+  }
+  
+  void show()
+  {
+      cout<<x<<endl;
+  }
+    
+};
+
+
+int main()
+{
+   A base;
+   base.x=4;
+   + base;
+   base.show();
+   base.x=100;
+   + base;
+   base.show();
+
+    return 0;
+}
