@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int a;
+   cin>>a;
+   try
+   {
+       if(a==1)
+       throw a;
+       
+       if(a==2)
+       throw 'A';
+       
+       if(a==3)
+       throw 4.5;
+   }
+   
+   catch(int a)
+   {
+       cout<<"Integer Exception";
+   }
+   
+   catch(char A)
+   {
+       cout<<"Charecter Exception";
+   }
+
+   catch(double b)
+   {
+       cout<<"double Exception";
+   }
+    return 0;
+}
