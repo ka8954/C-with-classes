@@ -1,0 +1,32 @@
+
+#include <iostream>
+#include <stack> 
+using namespace std;
+
+void Create_Stack(stack <int> mystack)
+{
+    stack <int> ms = mystack;
+    while(!ms.empty())
+    {
+        cout<<ms.top()<<" ";
+        ms.pop();
+    }
+}
+
+int main()
+{
+   stack <int> st;
+   int n,data;
+   cout<<"Enter Size : ";
+   cin>>n;
+   while(n--)
+   {
+       cin>>data;
+       st.push(data);
+   }
+   cout<<"\nStack is : ";
+   Create_Stack(st);
+   cout<<"\nSize of Stack : "<<st.size();
+    return 0;
+}
+
