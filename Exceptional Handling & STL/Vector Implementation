@@ -1,0 +1,51 @@
+#include <iostream>
+#include <vector> 
+using namespace std;
+int main()
+{
+  int num,n,pos;
+  cout<<"Enter the Size : ";
+  cin>>n;
+  vector<int>vect;
+  cout<<"Enter the Elements : ";
+  for(int i=0;i<n;i++)
+  {
+      cin>>num;
+      vect.push_back(num);
+  }
+  cout<<"The Elements in Vector are: ";
+  for(int i=0;i<n;i++)
+  {
+      cout<<vect[i]<<" ";
+  }
+  
+  vector<int>::iterator it=vect.begin();
+  vector<int>::iterator itr;
+  vect.insert(it+3,20);
+  cout<<"\n\nAfter Insertion : ";
+  for(int i=0;i<n;i++)
+  {
+      cout<<vect[i]<<" ";
+  }
+  cout<<"\n\nRemove at a particular position";
+  cout<<"Enter Position : ";
+  cin>>pos;
+  itr=it+pos;
+  vect.erase(itr);
+  cout<<"\nAfter Such Deletion : ";
+  for(int i=0;i<n;i++)
+  {
+      cout<<vect[i]<<" ";
+  }
+  cout<<"\n\nSize : ";
+  cout<<vect.size();
+  cout<<"\n\nCapacity : ";
+  cout<<vect.capacity();
+  cout<<"\n\nClear: ";
+  vect.clear();
+  for(it=vect.begin();it!=vect.end();it++)
+  {
+      cout<<*it<<" ";
+  }
+ return 0;
+}
