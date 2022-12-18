@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+template <class A,class B>
+class Sum
+{
+public:
+A num1;
+B num2;
+    void display()
+   {
+    cin>>num1>>num2;
+    cout<<num1+num2;
+   }
+};
+template <class X,class Y>
+class Product
+{
+public:
+X n1;
+Y n2;
+  void show()
+  {
+    cin>>n1>>n2;
+    cout<<n1*n2;
+  }
+};
+int main()
+{
+    Sum <int,int> S;
+    S.display();
+    Product <int,int> P;
+    P.show();
+    return 0;
+}
