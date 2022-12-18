@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+template <class T>
+void percent(T a)
+{
+    T num;
+    num = (a*100)/15;
+    cout<<num;
+}
+int main()
+{
+    float x=14.445;
+    percent(x);
+    return 0;
+}
