@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+template <class A>
+A Sum (A a)
+{
+    if(a==1)
+    return 1;
+    else
+    return (a+Sum(a-1));
+}
+
+int main()
+{
+   int n=5;
+   int res=Sum(n);
+   cout<<res;
+    return 0;
+}
