@@ -1,0 +1,34 @@
+ #include <iostream>
+#include <cstring>
+using namespace std;
+
+class Base 
+{
+    public:
+    int x=5;
+    void operator +()
+    {
+        x+=5;
+        cout<<x<<endl;
+    }
+};
+
+class Base1 
+{
+    public:
+    string a ="Hello";
+    string b="Hi";
+    void operator +()
+    {
+        cout<<a+b;
+    }
+};
+
+int main()
+{
+    Base b;
+    +b;
+    Base1 c;
+    +c;
+    return 0;
+}
