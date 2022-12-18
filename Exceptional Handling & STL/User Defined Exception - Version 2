@@ -1,0 +1,35 @@
+#include <iostream>
+#include <exception>
+using namespace std;
+
+class overspeed: public exception
+{
+    int speed;
+    public:
+    const char* what()
+    {
+     return "\nThis is not a JET";
+    }
+};
+
+int main()
+{
+    int carspeed=0;
+try
+{
+    while(1)
+    {
+        carspeed+=10;
+        if(carspeed>100)
+        {
+            throw overspeed();
+        }
+        cout<<"\nCarspeed : "<<carspeed;
+    }
+}
+catch(overspeed x)
+{
+    cout<<x.what();
+}
+  return 0;
+}
