@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+template <class temp>
+temp perfect_square(temp a,temp b)
+{
+    if((a*a)==b)
+    {
+    cout<<"Valid Set"<<endl;
+    return b;
+    }
+    else
+    {
+    cout<<"Invalid Set"<<endl;
+    return a;
+    }
+}
+
+int main()
+{
+  int x=6,y=25;
+  cout<<perfect_square(x,y);
+  return 0;
+}
