@@ -1,0 +1,28 @@
+#include <iostream>
+#include <algorithm>
+#include <vector> 
+#include <iterator>
+using namespace std;
+
+int main()
+{
+    int num,val,*p;
+    vector<int>vect;
+    vector<int>::iterator itr;
+    for(int i=0;i<5;i++)
+    {
+        cin>>num;
+        vect.push_back(num);
+    }
+    cout<<"Enter the Value :";
+    cin>>val;
+    itr=find(vect.begin(),vect.end(),val);
+    if(itr!=vect.end())
+    {
+        cout<<"Element Found";
+    }
+    else
+    cout<<"Element not Found";
+    return 0;
+}
+
