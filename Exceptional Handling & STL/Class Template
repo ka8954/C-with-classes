@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+template <class type1, class type2, class type3>
+class Result
+{
+    protected:
+    type1 ID;
+    type2 Name;
+    type3 Marks[5];
+    public:
+    void get_details()
+    {
+        cout<<"Enter ID : ";
+        cin>>ID;
+        cout<<"Enter Name : ";
+        cin>>Name;
+        cout<<"Enter Marks : ";
+        cin>>Marks[0]>>Marks[1]>>Marks[2]>>Marks[3]>>Marks[4];
+    }
+    void show_details()
+    {
+        cout<<"\nID : "<<ID<<endl;
+        cout<<"Name : "<<Name<<endl;
+        cout<<"Total : "<<Marks[0]+Marks[1]+Marks[2]+Marks[3]+Marks[4]<<endl;
+    }
+};
+int main()
+{
+   Result <int, char[300], int> R;
+   R.get_details();
+   R.show_details();
+    return 0;
+}
