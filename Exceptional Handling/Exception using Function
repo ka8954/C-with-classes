@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+void multiply(int a,int b)
+{
+    if(b!=0)
+    cout<<a/b<<endl;
+    else
+    throw b;
+}
+
+int main()
+{
+    try
+    {
+        multiply(4,2);
+        multiply(4,0);
+    }
+        
+    catch (int c)
+    {
+        cout<<"Exception Detected";
+    }
+  return 0;
+}
